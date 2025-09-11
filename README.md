@@ -1,4 +1,4 @@
-# Photon - AI-Powered Album Sorter 📸
+# AI-Powered Album Sorter 📸
 
 An intelligent photo management system that uses facial recognition to automatically organize and sort your photos in shared albums.
 
@@ -77,8 +77,8 @@ AI-Powered Album Sorter is a modern web application that revolutionizes how you 
 
 ### Clone Repository
 ```bash
-git clone https://github.com/t-kadre/Photon.git
-cd Photon
+git clone https://github.com/Anika-2048/Automatic-Photo-Sorter.git
+cd Photon-main
 ```
 ### Backend Setup
 ```bash
