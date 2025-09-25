@@ -107,15 +107,3 @@ npm install
 npm start
 ```
 
-## Web Application Snippets
-Here are demo of the application:
-
-<div align="center">
-  <video src="https://drive.google.com/file/d/1mu9yNFoWm-6NOI1SjZxZG4N_ioycIk5i/view?usp=drive_link" width="100%"/>
-</div>
-
----
-
-> "A picture is worth a thousand words, but an organized collection of pictures tells the complete story of our lives." 
-> 
-> -- AI Album Sorter Team
