@@ -78,7 +78,7 @@ AI-Powered Album Sorter is a modern web application that revolutionizes how you 
 ### Clone Repository
 ```bash
 git clone https://github.com/Anika-2048/Automatic-Photo-Sorter.git
-cd Photon-main
+cd Automatic-Photo-Sorter
 ```
 ### Backend Setup
 ```bash
