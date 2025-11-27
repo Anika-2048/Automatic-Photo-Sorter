@@ -6,11 +6,11 @@ from app.repository.auth import get_current_user
 from app.schemas import Album, User, Face, FaceCreate, AlbumCreate, ClusterCreate, Cluster
 from app.core.security import get_password_hash, verify_password
 from app.repository.face_recog import process_urls
-
+# CRUD
 
 router = APIRouter()
 
-# Create a new album and add it to the user's list of albums
+# Create Albumn: Create a new album and add it to the user's list of albums
 @router.post("/albums", response_model=Album)
 async def create_album(
     album: AlbumCreate, 
@@ -41,7 +41,7 @@ async def create_album(
     )
     return album_data
 
-# Upload multiple photos to an album and add clusters to the album
+# Update Albumn: Upload multiple photos to an album and add clusters to the album
 @router.post("/albums/{album_id}/upload", response_model=List[str])
 async def upload_photos(
     album_id: str, 
@@ -93,7 +93,7 @@ async def upload_photos(
 
     return photos_urls
 
-# Get all photos in an album by album ID
+# Read Albumn: Get all photos in an album by album ID
 @router.get("/albums/{album_id}", response_model=List[str])
 async def get_album_photos(
     album_id: str, 
@@ -110,7 +110,7 @@ async def get_album_photos(
     # Return the list of image URLs
     return db_album["image_urls"]
 
-# Add an album to the user's list of albums using album ID and password
+# Update user's albumn list: Add an album to the user's list of albums using album ID and password
 @router.post("/albums/{album_id}/add")
 async def add_album_to_user(
     album_id: str, 
@@ -134,7 +134,7 @@ async def add_album_to_user(
 
     return {"msg": "Album added to your list"}
 
-# Get all albums associated with the current user
+# Read user's albumn list: Get all albums associated with the current user
 @router.get("/user/albums", response_model=List[Album])
 async def get_user_albums(
     user: Annotated[User, Depends(get_current_user)], 
@@ -143,7 +143,7 @@ async def get_user_albums(
     user_albums = await db["albums"].find({"user_ids": str(user.id)}).to_list(length=None)
     return user_albums
 
-# Remove an album from the user's list of albums
+# Delete albumn: Remove an album from the user's list of albums
 @router.delete("/albums/{album_id}/remove")
 async def remove_album_from_user(
     album_id: str, 
