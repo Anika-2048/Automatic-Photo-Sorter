@@ -25,4 +25,4 @@ app.include_router(face_recog.router, prefix="", tags=["face_recognition"])
 
 @app.get("/")
 def read_root():
-    return {"status": "API is running", "version": "1.0"}
+    return {"status": "App is running (Catch it)"}
